@@ -1,0 +1,24 @@
+{
+  "name": "all-english-words",
+  "version": "1.0.0",
+  "description": "Checks if a word is part of the english dictionary or a sentence only includes english words.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharadwajduggaraju/all-english-words.git"
+  },
+  "keywords": [
+    "english",
+    "dictionary",
+    "javascript"
+  ],
+  "author": "Bharadwaj Duggaraju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bharadwajduggaraju/all-english-words/issues"
+  },
+  "homepage": "https://github.com/bharadwajduggaraju/all-english-words#readme"
+}
