@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/bharadwajduggaraju/all-english-words/issues"
   },
-  "homepage": "https://github.com/bharadwajduggaraju/all-english-words#readme"
+  "homepage": "https://github.com/bharadwajduggaraju/all-english-words#readme",
+  "dependencies": {
+    "typo-js": "^1.2.1"
+  }
 }
