@@ -38,8 +38,10 @@ class Result {
   }
 }
 
-const allEnglishWords = (englishString, config) => {
+const spellcheck = (englishString, config) => {
   return new Result(englishString).evaluate().formatted(config);
 };
 
-console.log(allEnglishWords("this is a sentence with all english words", { advanced: true }));
+console.log(
+  spellcheck("this is a sentence with all english words", { advanced: true })
+);
