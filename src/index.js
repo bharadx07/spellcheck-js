@@ -25,17 +25,21 @@ class Result {
     return this;
   }
 
-  formatted() {
-    return {
-      isAllEnglish: this.isAllEnglish,
-      englishWords: this.englishWords,
-      notEnglishWords: this.notEnglishWords,
-    };
+  formatted(config) {
+    if (config.advanced) {
+      return {
+        isAllEnglish: this.isAllEnglish,
+        englishWords: this.englishWords,
+        notEnglishWords: this.notEnglishWords,
+      };
+    }
+
+    return this.isAllEnglish;
   }
 }
 
-const allEnglishWords = (englishString) => {
-  return new Result(englishString).evaluate().formatted();
+const allEnglishWords = (englishString, config) => {
+  return new Result(englishString).evaluate().formatted(config);
 };
 
-console.log(allEnglishWords("hey", {}).isAllEnglish);
+console.log(allEnglishWords("this is a sentence with all english words", { advanced: true }));

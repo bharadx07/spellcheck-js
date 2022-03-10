@@ -1,3 +1,3 @@
-# all-english-words
+# spellcheck
 
-Checks if a word is part of the english dictionary or a sentence only includes english words.
+Checks if a english sentence or word is spelled correctly in JavaScript.

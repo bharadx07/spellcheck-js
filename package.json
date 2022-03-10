@@ -4,7 +4,7 @@
   "description": "Checks if a word is part of the english dictionary or a sentence only includes english words.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
