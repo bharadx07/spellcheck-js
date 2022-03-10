@@ -7,5 +7,13 @@
 */
 
 const fs = require("fs");
-
 const Constants = require("./constants");
+
+// three functions to go from raw to array of words
+const wordList = Object.keys(
+  JSON.parse(fs.readFileSync(Constants.dictionaryPath, "utf-8"))
+);
+
+class Dictionary {
+    
+}
