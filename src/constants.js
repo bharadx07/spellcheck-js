@@ -3,9 +3,17 @@
 */
 
 const dictionaryPath = __dirname + "/../dictionary/en_US.json";
+const specialCharactersPath =
+  __dirname + "/../dictionary/english_special_characters.json";
 
 const Constants = {
-  dictionaryPath,
+  dictionary: {
+    dictionaryPath,
+    specialCharactersPath,
+  },
+  parsing: {
+    spacing: " ",
+  },
 };
 
 module.exports = Constants;

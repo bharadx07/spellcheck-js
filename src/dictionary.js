@@ -11,8 +11,11 @@ const Constants = require("./constants");
 
 // three functions to go from raw to array of words
 const wordList = Object.keys(
-  JSON.parse(fs.readFileSync(Constants.dictionaryPath, "utf-8"))
+  JSON.parse(fs.readFileSync(Constants.dictionary.dictionaryPath, "utf-8"))
 );
+const specialCharacterList = JSON.parse(
+  fs.readFileSync(Constants.dictionary.specialCharactersPath, "utf-8")
+).spchar;
 
 class Dictionary {
   wordList;
@@ -26,6 +29,8 @@ class Dictionary {
   extend(words) {
     if (typeof words === "string") {
       wordList.push(words);
+
+      return;
     }
 
     words.forEach((word) => {
@@ -36,16 +41,20 @@ class Dictionary {
   purgeSpecialCharacters(word) {
     let withoutSpecialCharacters = word;
 
-    this.specialCharacterList.forEach((spcar) => {
-      withoutSpecialCharacters = withoutSpecialCharacters.split(spcar).join("");
+    this.specialCharacterList.forEach((spchar) => {
+      withoutSpecialCharacters = withoutSpecialCharacters
+        .split(spchar)
+        .join("");
     });
 
     return withoutSpecialCharacters;
   }
 
   check(word) {
-    return wordList.includes(this.withoutSpecialCharacters(word));
+    return wordList.includes(this.purgeSpecialCharacters(word));
   }
 }
 
-const dictionary = new Dictionary(wordList, )
+const dictionary = new Dictionary(wordList, specialCharacterList);
+
+module.exports = dictionary;
