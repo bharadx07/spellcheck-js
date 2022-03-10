@@ -1,13 +1,11 @@
-/* constants include:
-    - paths to dictionary file
+/* CONSTANTS
+  - dictionaryPath: raw file path to en_US.json
 */
 
 const dictionaryPath = __dirname + "/../dictionary/en_US.json";
 
 const Constants = {
-  dictionary: {
-    dictionaryPath,
-  },
+  dictionaryPath,
 };
 
 module.exports = Constants;
