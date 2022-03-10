@@ -1,7 +1,5 @@
-Raw dictionary files and words - Published in 2006.
+Raw dictionary files and words
 
 ---
 
-This dictionary is based on a subset of the original English wordlist created by Kevin Atkinson for Pspell and  Aspell and thus is covered by his original LGPL license.  The affix file is a heavily modified version of the original english.aff file which was released as part of Geoff Kuenning's Ispell and as such is covered by his BSD license.
-
-Thanks to both authors for their wonderful work.
+This folder contains ```en_US.json``` - a massive 400k+ line JSON file that contains almost every english word. This is loaded to ensure that spelling checks are as accurate as possible.
