@@ -1,7 +1,7 @@
 {
-  "name": "all-english-words",
+  "name": "spellcheck",
   "version": "1.0.0",
-  "description": "Checks if a word is part of the english dictionary or a sentence only includes english words.",
+  "description": "Checks if a english sentence or word is spelled correctly in JavaScript.",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
