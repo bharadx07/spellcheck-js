@@ -1,4 +1,4 @@
-Raw dictionary files and words
+## Raw dictionary files and words.
 
 ---
 
