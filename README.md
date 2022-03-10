@@ -36,7 +36,7 @@ Get more advanced info:
 spellcheck("which wordd wrong"); // {isSpelledCorrectly: false, correctlySpelledWords: ['which', 'wrong'], incorrectlySpelledWords: ['wordd']}
 ```
 
-Or add your own words
+Or add your own words:
 
 ```js
 spellcheck("customword"); // false

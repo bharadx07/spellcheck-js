@@ -1,6 +1,6 @@
 {
   "name": "spellcheck-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checks if a english sentence or word is spelled correctly in JavaScript.",
   "main": "src/index.js",
   "scripts": {
