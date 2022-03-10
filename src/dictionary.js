@@ -15,5 +15,37 @@ const wordList = Object.keys(
 );
 
 class Dictionary {
-    
+  wordList;
+  specialCharacterList;
+
+  constructor(wordList, specialCharacterList) {
+    this.wordList = wordList;
+    this.specialCharacterList = specialCharacterList;
+  }
+
+  extend(words) {
+    if (typeof words === "string") {
+      wordList.push(words);
+    }
+
+    words.forEach((word) => {
+      wordList.push(word);
+    });
+  }
+
+  purgeSpecialCharacters(word) {
+    let withoutSpecialCharacters = word;
+
+    this.specialCharacterList.forEach((spcar) => {
+      withoutSpecialCharacters = withoutSpecialCharacters.split(spcar).join("");
+    });
+
+    return withoutSpecialCharacters;
+  }
+
+  check(word) {
+    return wordList.includes(this.withoutSpecialCharacters(word));
+  }
 }
+
+const dictionary = new Dictionary(wordList, )
