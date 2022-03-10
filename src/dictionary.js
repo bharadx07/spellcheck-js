@@ -9,9 +9,3 @@
 const fs = require("fs");
 
 const Constants = require("./constants");
-const Typo = require("typo-js");
-
-const aff = fs.readFileSync(Constants.dictionary.affPath, "utf-8");
-const dic = fs.readFileSync(Constants.dictionary.dicPath, "utf-8");
-
-module.exports = new Typo("en_US", aff, dic);

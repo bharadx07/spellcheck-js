@@ -1,14 +1,12 @@
 /* constants include:
-    - paths to dictionary files
+    - paths to dictionary file
 */
 
-const affPath = __dirname + "/../dictionary/en_US.aff";
-const dicPath = __dirname + "/../dictionary/en_US.dic";
+const dictionaryPath = __dirname + "/../dictionary/en_US.json";
 
 const Constants = {
   dictionary: {
-    affPath,
-    dicPath,
+    dictionaryPath,
   },
 };
 
