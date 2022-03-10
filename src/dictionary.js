@@ -55,6 +55,8 @@ class Dictionary {
   }
 }
 
-const dictionary = new Dictionary(wordList, specialCharacterList);
-
-module.exports = dictionary;
+module.exports = {
+  Dictionary,
+  wordList,
+  specialCharacterList,
+};

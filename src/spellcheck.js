@@ -1,5 +1,7 @@
-const dictionary = require("./dictionary");
+const { Dictionary, wordList, specialCharacterList } = require("./dictionary");
 const Constants = require("./constants");
+
+const dictionary = new Dictionary(wordList, specialCharacterList);
 
 class SpellCheck {
   isSpelledCorrectly = true;
@@ -10,7 +12,9 @@ class SpellCheck {
     this.wordOrSentence = wordOrSentence;
   }
 
-  evaluate() {
+  evaluate(additionalWords) {
+    dictionary.extend(additionalWords);
+
     const eachWord = this.wordOrSentence.split(Constants.parsing.spacing);
 
     eachWord.forEach((word) => {
@@ -20,15 +24,15 @@ class SpellCheck {
         this.correctlySpelledWords.push(word);
       } else {
         this.incorrectlySpelledWords.push(word);
-        this.isAllEnglish = false;
+        this.isSpelledCorrectly = false;
       }
     });
 
     return this;
   }
 
-  formatted(config) {
-    if (config.advanced) {
+  formatted(advancedOrNot) {
+    if (advancedOrNot) {
       return {
         isSpelledCorrectly: this.isSpelledCorrectly,
         correctlySpelledWords: this.correctlySpelledWords,
